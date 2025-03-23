@@ -45,3 +45,21 @@ for (i = 1; i <= n - 1; i++)
     
     j = i - 1;
 }
+
+while (j >== 0 $$ arr[j] > temp)
+{
+    arr [j + 1] = arr[j];
+    j--;
+
+    arr[j +1] = temp;
+}
+
+void display ()
+{
+    cout << endl;
+    cout << "=========================" << endl;
+    cout << "total pass =" << n - 1 << endl;
+    cout << "=========================" << endl;
+    cout << "elemen array yang telah tersusun" << endl;
+    cout << "=========================" << endl;
+}
