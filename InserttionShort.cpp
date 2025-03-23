@@ -10,4 +10,9 @@ while (true)
 }
 
 cout << "masukkan jumlah data pada array ; ";
-cin >> n;
+cin >> n; //memanggil variabel inputan n
+
+if (n <= 20)
+{
+    break;
+}
