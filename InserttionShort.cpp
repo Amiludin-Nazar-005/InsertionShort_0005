@@ -1,60 +1,73 @@
 #include <iostream>
 using namespace std;
 
-int arr [20];
+int arr[20];
 int n;
 
-void input ()
+void input()
 {
     while (true)
+    {
+        cout << "masukkan jumlah data pada array :";
+        cin >> n; // memanggil variabel inputan n
 
+        if (n <= 20)
+        {
+            break;
+        }
 
-cout << "masukkan jumlah data pada array :";
-cin >> n; //memanggil variabel inputan n
-}
-if (n <= 20)
-{
-    break;
-}
+        else
+        {
+            cout << "\nArray yang anda masukkan maksimal 20 elemen.\n";
+        }
+        cout << "masukkan jumlah data pada array :";
+        cin >> n; // memanggil variabel inputan n
 
-else 
-{
-    cout << "\nArray yang anda masukkan maksimal 20 elemen.\n";
+        if (n <= 20)
+        {
+            break;
+        }
+
+        else
+        {
+            cout << "\nArray yang anda masukkan maksimal 20 elemen.\n";
+        }
+    }
 
     cout << endl;
     cout << "====================" << endl;
     cout << "masukkan elemen array" << endl;
     cout << "====================" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "data ke_" << (i + 1) << ": ";
+        cin >> arr[i];
+    }
 }
 
-for (int i =0; i< n; i++)
-{
-    cout << "data ke_" << (i + 1) << ": ";
-    cin >> arr[i];
-}
-
-void insertionShort ()
+void insertionShort()
 {
     int temp;
     int j, i;
-}
 
-for (i = 1; i <= n - 1; i++)
-{
-    temp = arr[1];
+    for (i = 1; i <= n - 1; i++)
+    {
+        temp = arr[i];
+
+        j = i - 1;
+        while (j >= 0 && arr[j] > temp)
+        {
+            arr[j + 1] = arr[j];
+            j--;
     
-    j = i - 1;
+            arr[j + 1] = temp;
+        }
+    }
+
+   
 }
-
-while (j >== 0 $$ arr[j] > temp)
-{
-    arr [j + 1] = arr[j];
-    j--;
-
-    arr[j +1] = temp;
-}
-
-void display ()
+void display()
 {
     cout << endl;
     cout << "=========================" << endl;
@@ -62,4 +75,19 @@ void display ()
     cout << "=========================" << endl;
     cout << "elemen array yang telah tersusun" << endl;
     cout << "=========================" << endl;
+
+    for (int j = 0; j < n; j++)
+    {
+        cout << arr[j] << endl;
+        cout << endl;
+    }
+}
+
+int main()
+{
+    input();
+    insertionShort();
+    display();
+    system("pause");
+    return 0;
 }
