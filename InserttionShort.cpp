@@ -9,7 +9,7 @@ void input ()
     while (true)
 }
 
-cout << " masukkan jumlah data pada array : ";
+cout << "masukkan jumlah data pada array :";
 cin >> n; //memanggil variabel inputan n
 
 if (n <= 20)
@@ -20,4 +20,10 @@ if (n <= 20)
 else 
 {
     cout << "\nArray yang anda masukkan maksimal 20 elemen.\n";
+}
+{
+    cout << endl;
+    cout << "====================" << endl;
+    cout << "masukkan elemen array" << endl;
+    cout << "====================" << endl;
 }
