@@ -11,9 +11,9 @@ void input ()
 
 cout << "masukkan jumlah data pada array :";
 cin >> n; //memanggil variabel inputan n
-
+}
 if (n <= 20)
-
+{
     break;
 }
 
@@ -37,4 +37,11 @@ void insertionShort ()
 {
     int temp;
     int j, i;
+}
+
+for (i = 1; i <= n - 1; i++)
+{
+    temp = arr[1];
+    
+    j = i - 1;
 }
